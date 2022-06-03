@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :user_rooms
+  has_many :chats
+  has_many :rooms, through: :user_rooms
   has_many :books, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :favorited_books, through: :favorites, source: :book
