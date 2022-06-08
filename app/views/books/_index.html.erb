@@ -20,6 +20,7 @@
             <%= render "favorites/btn", book: book %>
         </td>
         <td class="comments-count">コメント数: <%= book.book_comments.count %></td>
+        <td class="impressionist_count">閲覧数：<%=  book.impressionist_count %></td>
       </tr>
     <% end %>
   </tbody>

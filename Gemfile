@@ -58,3 +58,5 @@ gem 'devise'
 gem 'jquery-rails'
 
 gem 'kaminari', '~> 0.17.0'
+
+gem 'impressionist'

@@ -4,6 +4,8 @@ class Book < ApplicationRecord
   has_many :favorited_users, through: :favorites, source: :user
   has_many :book_comments, dependent: :destroy
 
+  is_impressionable counter_cache: true
+
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
   end
